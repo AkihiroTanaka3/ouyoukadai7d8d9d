@@ -7,7 +7,7 @@ class SearchesController < ApplicationController
       @users = User.looks(params[:search],params[:word])
         render "/searches/search_result"
     else
-      @users = Book.looks(params[:search], params[:word])
+      @books = Book.looks(params[:search], params[:word])
         render "/searches/search_result"
     end
   end
