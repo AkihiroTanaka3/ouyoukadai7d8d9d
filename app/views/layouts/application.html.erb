@@ -12,7 +12,9 @@
     <%= render 'layouts/header' %>
     <%= render 'searches/serach' %>
       <main>
-        <p id="notice"><%= notice %></p>
+        <div id="flash-message">
+          <%= render 'layouts/flash' %>
+        </div>
         <%= yield %>
       </main>
     <%= render 'layouts/footer' %>
