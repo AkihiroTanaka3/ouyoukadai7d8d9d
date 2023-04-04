@@ -1,1 +1,1 @@
-$(".comments-error").html("<%= j(render 'layouts/errors', model: @book_comment) %>");
+$(".body > container").perpend("<%= j(render 'layouts/errors', o: @book_comment) %>");

@@ -10,12 +10,14 @@
   </head>
   <body>
     <%= render 'layouts/header' %>
-    <%= render 'searches/serach' %>
       <main>
-        <div id="flash-message">
-          <%= render 'layouts/flash' %>
+        <div class="body">
+          <div class="container">
+            <p id="notice"><%= notice %></p>
+
+            <%= yield %>
+          </div>
         </div>
-        <%= yield %>
       </main>
     <%= render 'layouts/footer' %>
   </body>
