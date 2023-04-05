@@ -9,6 +9,10 @@ class Book < ApplicationRecord
     favorites.exists?(user_id: user.id)
   end
   
+  # scope :スコープの名前, -> { 条件式 }でメソッド化できる
+  scope :created_today, -> { where(created_at: Time.zone.now.all_day) } #今日
+  scope :created_yesterday, -> { where(created_at: 1.day.ago.all_day) } #昨日
+  
   validates :title,presence:true
   validates :body,presence:true,length:{maximum:200}
   
