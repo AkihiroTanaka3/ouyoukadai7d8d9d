@@ -12,6 +12,7 @@
       <%= render 'books/index',books: @books %>
       <%= render 'number_posts', today_book: @today_book, yesterday_book: @yesterday_book, the_day_before: @the_day_before,
       this_week_book: @this_week_book, last_week_book: @last_week_book, the_week_before: @the_week_before %>
+      <%= render 'chart', books: @books, yesterday_book: @yesterday_book, today_book: @today_book %>
     </div>
   </div>
 </div>
